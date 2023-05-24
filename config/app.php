@@ -160,6 +160,7 @@ return [
          * Package Service Providers...
          */
         Yajra\DataTables\DataTablesServiceProvider::class,
+        Laravelista\Ekko\Frameworks\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -184,6 +185,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Ekko' => Laravelista\Ekko\Frameworks\Laravel\Facade::class,
     ])->toArray(),
 
 ];

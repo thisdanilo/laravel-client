@@ -1,0 +1,1 @@
+<script src="{{ mix('/js/admin.js') }}" type="text/javascript"></script>

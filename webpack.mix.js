@@ -33,6 +33,7 @@ const mix = require('laravel-mix');
     "node_modules/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.js",
     "node_modules/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.js",
     "node_modules/admin-lte/dist/js/adminlte.min.js",
+    "node_modules/jquery-mask-plugin/dist/jquery.mask.min.js",
 ], "public/js/admin.js");
 
 // Client JS

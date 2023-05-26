@@ -10,6 +10,8 @@ $(document).ready(function () {
     // Instance of plugins
     //-----------------------------------------------------
 
+    $("form .cpf").mask("000.000.000-00");
+
     $("#ajax-datatable").DataTable({
         processing: true,
         serverSide: true,
@@ -20,13 +22,26 @@ $(document).ready(function () {
                 return request.setRequestHeader("X-CSRF-Token", token);
             },
         },
-        columns: [
-            { data: "id" },
-            { data: "name" },
-            { data: "cpf" },
-            { data: "email" },
-            { data: "active" },
-            { data: "action", orderable: false, searchable: false },
+        columns: [{
+                data: "id"
+            },
+            {
+                data: "name"
+            },
+            {
+                data: "cpf"
+            },
+            {
+                data: "email"
+            },
+            {
+                data: "active"
+            },
+            {
+                data: "action",
+                orderable: false,
+                searchable: false
+            },
         ],
         language: {
             url: datatable_url,

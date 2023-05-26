@@ -21,6 +21,11 @@
 @endsection
 
 @section('content')
+
+    {{-- Respostas --}}
+    @include('dashboard.partials.errors')
+    @include('dashboard.partials.success')
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">

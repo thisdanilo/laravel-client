@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,23 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.client.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::group([
+    'prefix' => 'dashboard/clientes',
+    'as' => 'client.',
+    'controller' => ClientController::class,
+    'middleware' => [
+        'auth',
+    ],
+], function () {
+    Route::get('/', 'index')->name('index');
+
+    Route::post('/datatable', 'datatable')->name('datatable');
+
+    Route::get('{id}/show', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+
+    Route::post('/', 'store')->name('store');
+});
 
 require __DIR__.'/auth.php';

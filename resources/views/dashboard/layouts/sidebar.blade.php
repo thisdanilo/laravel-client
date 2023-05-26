@@ -16,7 +16,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('client.index') }}" class=" {{ Ekko::areActiveRoutes(['client*'], 'nav-link active') }}">
                         <i class="fas fa-users"></i>
                         <p class="ml-3">Clientes</p>
                     </a>

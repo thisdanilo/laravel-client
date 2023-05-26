@@ -15,16 +15,7 @@
         <div class="content-wrapper">
 
             <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Clientes</a></li>
-                                <li class="breadcrumb-item active">Painel de Controle</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+                @yield('content_header')
             </section>
             <section class="content">
                 @yield('content')
@@ -37,6 +28,8 @@
     </div>
 
     @include('dashboard.layouts.footer-scripts')
+
+    @yield('footer-extras')
 </body>
 
 </html>

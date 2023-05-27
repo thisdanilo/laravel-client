@@ -42,6 +42,42 @@
                     </div>
                 </div>
             @elseif (isset($client))
+                {{-- Nome --}}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Nome:<span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control" value="{{ $client->name }}" required>
+                    </div>
+                </div>
+
+                {{-- CPF --}}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>CPF:<span class="text-danger">*</span></label>
+                        <input type="text" name="cpf" class="form-control cpf" value="{{ $client->cpf }}" required>
+                    </div>
+                </div>
+
+                {{-- Email --}}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Email:<span class="text-danger">*</span></label>
+                        <input type="email" name="email" class="form-control" value="{{ $client->email }}" required>
+                    </div>
+                </div>
+
+                {{-- Ativo --}}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Ativo:<span class="text-danger">*</span></label>
+                        <select name="active" class="form-control" style="width: 100%;" required>
+
+                            <option value="1" @if ($client->active) selected @endif>Sim</option>
+                            <option value="0" @if (!$client->active) selected @endif>Não</option>
+
+                        </select>
+                    </div>
+                </div>
             @else
                 {{-- Nome --}}
                 <div class="col-md-3">

@@ -69,4 +69,44 @@ class ClientController extends Controller
             ->route('client.index')
             ->with('message', 'Cadastro realizado com sucesso.');
     }
+
+    /** Tela de edição */
+    public function edit(int $id): View
+    {
+        $client = $this->client->findOrFail($id);
+
+        return view('dashboard.client.edit', compact('client'));
+    }
+
+    /** Atualiza o registro */
+    public function update(ClientRequest $request, int $id): RedirectResponse
+    {
+        $client = $this->client->findOrFail($id);
+
+        $this->client_service->updateOrCreate($request->all(), $client->id);
+
+        return redirect()
+            ->route('client.edit', $id)
+            ->with('message', 'Atualização realizada com sucesso.');
+    }
+
+    /** Tela de exclusão */
+    public function confirmDelete(int $id): View
+    {
+        $client = $this->client->findOrFail($id);
+
+        return view('dashboard.client.confirm-delete', compact('client'));
+    }
+
+    /** Remove o registro */
+    public function delete(int $id): RedirectResponse
+    {
+        $client = $this->client->findOrFail($id);
+
+        $this->client_service->delete($client);
+
+        return redirect()
+            ->route('client.index')
+            ->with('message', 'Exclusão realizado com sucesso.');
+    }
 }

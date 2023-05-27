@@ -25,7 +25,7 @@
                 @include('dashboard.client.partials._client', ['show' => true])
 
                 <div class="row">
-                    <div class="col-sm-2 text-right">
+                    <div class="col-sm-2">
                         <a href="{{ route('client.edit', $client->id) }}" class="btn btn-primary">
                             <i class="fas fa-pen"></i> Editar
                         </a>

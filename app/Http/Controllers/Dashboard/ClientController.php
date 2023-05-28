@@ -30,10 +30,23 @@ class ClientController extends Controller
         $clients = $this->client->query();
 
         return DataTables::of($clients)
+            ->filterColumn(
+                'active',
+                function ($q, $keyword) {
+                    $formatted_active = strtolower(str_replace(['ã', 'Ã'], ['a', 'A'], $keyword));
+
+                    $q->when($formatted_active == 'sim', function ($q) {
+                        $q->where('active', 1);
+                    })
+                        ->when($formatted_active == 'nao', function ($q) {
+                            $q->where('active', 0);
+                        });
+                }
+            )
             ->editColumn(
                 'active',
                 function ($client) {
-                    return 'sim';
+                    return $client->formatted_active;
                 }
             )
             ->addColumn('action', function ($model) {

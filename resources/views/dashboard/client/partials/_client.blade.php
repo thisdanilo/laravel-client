@@ -38,7 +38,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Ativo:</label>
-                        <input type="text" class="form-control" readonly value="{{ $client->active }}">
+                        <input type="text" class="form-control" readonly value="{{ $client->formatted_active }}">
                     </div>
                 </div>
             @elseif (isset($client))

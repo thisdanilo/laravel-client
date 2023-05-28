@@ -46,7 +46,7 @@ class ClientController extends Controller
             ->editColumn(
                 'active',
                 function ($client) {
-                    return $client->formatted_active;
+                    return $client->present()->getActive;
                 }
             )
             ->addColumn('action', function ($model) {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1faf8832f4227a4685c8b90e873cac3a",
+    "content-hash": "17a2012dcae3a74f8d7647ac1d65c177",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,64 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "datacreativa/laravel-presentable",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/datacreativa/laravel-presentable.git",
+                "reference": "8e221af07327f75346c52e35863227d1355539ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/datacreativa/laravel-presentable/zipball/8e221af07327f75346c52e35863227d1355539ab",
+                "reference": "8e221af07327f75346c52e35863227d1355539ab",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TheHiveTeam\\Presentable\\PresentableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheHiveTeam\\Presentable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Zarate",
+                    "email": "zaratedev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create presenters for Eloquent Models",
+            "homepage": "https://github.com/datacreativa/laravel-presentable",
+            "keywords": [
+                "laravel",
+                "presentable"
+            ],
+            "support": {
+                "issues": "https://github.com/datacreativa/laravel-presentable/issues",
+                "source": "https://github.com/datacreativa/laravel-presentable/tree/v1.2.0"
+            },
+            "time": "2023-02-21T04:44:01+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

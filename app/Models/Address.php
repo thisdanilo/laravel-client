@@ -29,6 +29,7 @@ class Address extends Model
         'updated_at',
     ];
 
+    /** Obtém a relação */
     public function client(): BelongsTo
     {
         return $this->belongsTo(Client::class)->withTrashed();

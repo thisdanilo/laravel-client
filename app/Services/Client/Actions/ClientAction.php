@@ -6,10 +6,6 @@ use App\Models\Client;
 
 class ClientAction
 {
-    //-----------------------------------------------------------------
-    // Main Functions and Methods
-    //-----------------------------------------------------------------
-
     /** Cadastra ou atualiza o registro */
     public function handle(array $request, ?int $id): Client
     {
@@ -17,10 +13,6 @@ class ClientAction
 
         return Client::updateOrCreate(['id' => $id], $data);
     }
-
-    //-----------------------------------------------------------------
-    // Complementary Functions and Methods
-    //-----------------------------------------------------------------
 
     /** Obtêm os dados */
     private function getData(array $request): array

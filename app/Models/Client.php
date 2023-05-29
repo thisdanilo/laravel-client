@@ -38,11 +38,13 @@ class Client extends Model
         'deleted_at',
     ];
 
+     /** Formata o atributo */
     public function getFormattedActiveAttribute()
     {
         return $this->active ? 'Sim' : 'Não';
     }
 
+    /** Obtém a relação */
     public function address(): HasOne
     {
         return $this->hasOne(Address::class);

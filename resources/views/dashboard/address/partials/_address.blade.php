@@ -190,7 +190,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">UF<span class="text-danger">*</span></label>
-                        <input type="text" name="uf" class="form-control" required />
+                        <input type="text" name="uf" class="form-control uf" required />
                     </div>
                 </div>
 
@@ -198,7 +198,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">Cidade<span class="text-danger">*</span></label>
-                        <input type="text" name="city" class="form-control" required />
+                        <input type="text" name="city" class="form-control city" required />
                     </div>
                 </div>
             @endif

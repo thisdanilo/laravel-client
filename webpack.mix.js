@@ -36,6 +36,12 @@ const mix = require('laravel-mix');
     "node_modules/jquery-mask-plugin/dist/jquery.mask.min.js",
 ], "public/js/admin.js");
 
+// Address JS
+mix.scripts(
+    "resources/js/address.js",
+    "public/js/address.js"
+);
+
 // Client JS
 mix.scripts(
     "resources/js/client.js",

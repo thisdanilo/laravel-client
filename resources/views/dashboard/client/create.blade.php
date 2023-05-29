@@ -53,5 +53,6 @@
 @endsection
 
 @section('footer-extras')
+    <script src="{{ mix('js/address.js') }}"></script>
     <script src="{{ mix('js/client.js') }}"></script>
 @endsection

@@ -38,7 +38,7 @@ class Client extends Model
         'deleted_at',
     ];
 
-     /** Formata o atributo */
+    /** Formata o atributo */
     public function getFormattedActiveAttribute()
     {
         return $this->active ? 'Sim' : 'Não';

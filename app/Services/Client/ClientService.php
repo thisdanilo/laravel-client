@@ -25,8 +25,6 @@ class ClientService implements ClientServiceInterface
         } catch (Exception $e) {
             DB::rollBack();
 
-            dd($e);
-
             abort(500);
         }
     }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientRequest;
 use App\Models\Client;
-use App\Services\ClientServiceInterface;
+use App\Services\Client\ClientServiceInterface;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Yajra\DataTables\DataTables;
@@ -62,7 +62,7 @@ class ClientController extends Controller
     /** Tela de visualização */
     public function show(int $id): View
     {
-        $client = $this->client->findOrFail($id);
+        $client = $this->client->with('address')->findOrFail($id);
 
         return view('dashboard.client.show', compact('client'));
     }
@@ -86,7 +86,7 @@ class ClientController extends Controller
     /** Tela de edição */
     public function edit(int $id): View
     {
-        $client = $this->client->findOrFail($id);
+        $client = $this->client->with('address')->findOrFail($id);
 
         return view('dashboard.client.edit', compact('client'));
     }

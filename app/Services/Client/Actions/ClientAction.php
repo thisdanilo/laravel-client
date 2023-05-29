@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Actions;
+namespace App\Services\Client\Actions;
 
 use App\Models\Client;
 
@@ -11,11 +11,11 @@ class ClientAction
     //-----------------------------------------------------------------
 
     /** Cadastra ou atualiza o registro */
-    public function handle(array $request, ?int $id): void
+    public function handle(array $request, ?int $id): Client
     {
         $data = $this->getData($request, $id);
 
-        Client::updateOrCreate(['id' => $id], $data);
+        return Client::updateOrCreate(['id' => $id], $data);
     }
 
     //-----------------------------------------------------------------

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Client;
 
 use App\Models\Client;
 use Exception;
-use Facades\App\Services\Actions\ClientAction;
-use Facades\App\Services\Actions\ClientDeleteAction;
+use Facades\App\Services\Address\Actions\AddressAction;
+use Facades\App\Services\Client\Actions\ClientAction;
+use Facades\App\Services\Client\Actions\ClientDeleteAction;
 use Illuminate\Support\Facades\DB;
 
 class ClientService implements ClientServiceInterface
@@ -16,11 +17,15 @@ class ClientService implements ClientServiceInterface
         DB::beginTransaction();
 
         try {
-            ClientAction::handle($request, $id);
+            $client = ClientAction::handle($request, $id);
+
+            AddressAction::handle($request, $client, $id);
 
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
+
+            dd($e);
 
             abort(500);
         }

@@ -10,7 +10,8 @@ $(document).ready(function () {
     // Instance of plugins
     //-----------------------------------------------------
 
-    $("form .cpf").mask("000.000.000-00");
+    $(".cpf").mask("000.000.000-00");
+    $(".zipcode").mask("00000-000");
 
     $("#ajax-datatable").DataTable({
         processing: true,

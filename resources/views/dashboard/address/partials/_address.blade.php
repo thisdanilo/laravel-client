@@ -14,7 +14,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">CEP</label>
-                        <input type="tel" name="zipcode" class="form-control" readonly value="{{ $address->zipcode }}" />
+                        <input type="tel" name="zipcode" class="form-control zipcode" readonly value="{{ $address->zipcode }}" />
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">CEP<span class="text-danger">*</span></label>
-                        <input type="tel" name="zipcode" class="form-control" required minlength="9" value="{{ $address->zipcode }}" />
+                        <input type="tel" name="zipcode" class="form-control zipcode" required minlength="9" value="{{ $address->zipcode }}" />
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">CEP<span class="text-danger">*</span></label>
-                        <input type="tel" name="zipcode" class="form-control" required minlength="9" />
+                        <input type="tel" name="zipcode" class="form-control zipcode" required minlength="9" />
                     </div>
                 </div>
 

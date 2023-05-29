@@ -31,6 +31,9 @@
                     {{-- Dados do clientes --}}
                     @include('dashboard.client.partials._client')
 
+                    {{-- Endereço --}}
+                    @include('dashboard.address.partials._address')
+
                     {{-- Botão --}}
                     <div class="row">
                         <div class="col-md-3">

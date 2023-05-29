@@ -24,6 +24,12 @@
                 {{-- Dados do clientes --}}
                 @include('dashboard.client.partials._client', ['show' => true])
 
+                {{-- Endereço --}}
+                @include('dashboard.address.partials._address', [
+                    'address' => $client->address,
+                    'show' => true,
+                ])
+
                 <div class="row">
                     <div class="col-sm-2">
                         <a href="{{ route('client.edit', $client->id) }}" class="btn btn-primary">

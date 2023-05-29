@@ -86,7 +86,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">Logradouro<span class="text-danger">*</span></label>
-                        <input type="text" name="street" class="form-control" required value="{{ $address->street }}" />
+                        <input type="text" name="street" class="form-control street" required value="{{ $address->street }}" />
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">UF<span class="text-danger">*</span></label>
-                        <input type="text" name="uf" class="form-control" required value="{{ $address->uf }}"/>
+                        <input type="text" name="uf" class="form-control uf" required value="{{ $address->uf }}"/>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">Cidade<span class="text-danger">*</span></label>
-                        <input type="text" name="city" class="form-control" required value="{{ $address->city }}"/>
+                        <input type="text" name="city" class="form-control city" required value="{{ $address->city }}"/>
                     </div>
                 </div>
             @else
@@ -150,7 +150,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="control-label">Logradouro<span class="text-danger">*</span></label>
-                        <input type="text" name="street" class="form-control" required />
+                        <input type="text" name="street" class="form-control street" required />
                     </div>
                 </div>
 

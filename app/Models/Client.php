@@ -38,7 +38,7 @@ class Client extends Model
         'deleted_at',
     ];
 
-     /** Formata o atributo */
+    /** Formata o atributo */
     public function getFormattedActiveAttribute()
     {
         return $this->active ? 'Sim' : 'Não';
@@ -48,5 +48,10 @@ class Client extends Model
     public function address(): HasOne
     {
         return $this->hasOne(Address::class);
+    }
+
+    protected static function newFactory()
+    {
+        return \Database\Factories\ClientFactory::new();
     }
 }

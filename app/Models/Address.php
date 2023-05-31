@@ -34,4 +34,9 @@ class Address extends Model
     {
         return $this->belongsTo(Client::class)->withTrashed();
     }
+
+    protected static function newFactory()
+    {
+        return \Database\Factories\AddressFactory::new();
+    }
 }

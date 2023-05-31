@@ -49,4 +49,9 @@ class Client extends Model
     {
         return $this->hasOne(Address::class);
     }
+
+    protected static function newFactory()
+    {
+        return \Database\Factories\ClientFactory::new();
+    }
 }

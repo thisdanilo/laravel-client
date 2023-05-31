@@ -26,7 +26,7 @@ class ClientTest extends TestCase
         $this->assertEquals($expected_result, $this->client->formatted_active);
     }
 
-    public function valueAttributeDataProvider()
+    public static function valueAttributeDataProvider()
     {
         yield 'campo formatado deve retornar Sim' => [
             'value' => true,
